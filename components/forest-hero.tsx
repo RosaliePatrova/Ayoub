@@ -1062,7 +1062,7 @@ export default function ForestHero() {
       </div>
 
       <a
-        href="/rond/index.html"
+        href="/rond"
         aria-label={copy.spaceButton}
         title={copy.spaceButton}
         className="group absolute bottom-5 left-4 z-50 inline-flex items-center gap-2 rounded-full border border-[#dce1ff]/30 bg-[#081326]/72 px-3 py-2 text-xs font-semibold text-[#f7f1cf] shadow-[0_0_24px_rgba(145,234,213,0.2),inset_0_0_14px_rgba(249,245,178,0.06)] backdrop-blur-md transition hover:-translate-y-0.5 hover:border-[#91ead5]/70 hover:bg-[#10213b]/85 hover:shadow-[0_0_34px_rgba(145,234,213,0.3)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#91ead5]/80 sm:bottom-6 sm:left-6"
