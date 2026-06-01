@@ -1,0 +1,373 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* LoFi Forest Color Palette */
+  --background: #0a152a;
+  --foreground: #dce1ff;
+  --card: #0d3b35;
+  --card-foreground: #dce1ff;
+  --popover: #0d3b35;
+  --popover-foreground: #dce1ff;
+  --primary: #5fae9e;
+  --primary-foreground: #0a152a;
+  --secondary: #0d3b35;
+  --secondary-foreground: #dce1ff;
+  --muted: #1a4d45;
+  --muted-foreground: #9ab8b3;
+  --accent: #f9f5b2;
+  --accent-foreground: #0a152a;
+  --destructive: #ff6b6b;
+  --destructive-foreground: #dce1ff;
+  --border: #1a4d45;
+  --input: #0d3b35;
+  --ring: #5fae9e;
+  --chart-1: #5fae9e;
+  --chart-2: #f9f5b2;
+  --chart-3: #dce1ff;
+  --chart-4: #0d3b35;
+  --chart-5: #1a4d45;
+  --radius: 0.625rem;
+  --sidebar: #0d3b35;
+  --sidebar-foreground: #dce1ff;
+  --sidebar-primary: #5fae9e;
+  --sidebar-primary-foreground: #0a152a;
+  --sidebar-accent: #f9f5b2;
+  --sidebar-accent-foreground: #0a152a;
+  --sidebar-border: #1a4d45;
+  --sidebar-ring: #5fae9e;
+}
+
+.dark {
+  --background: #0a152a;
+  --foreground: #dce1ff;
+  --card: #0d3b35;
+  --card-foreground: #dce1ff;
+  --popover: #0d3b35;
+  --popover-foreground: #dce1ff;
+  --primary: #5fae9e;
+  --primary-foreground: #0a152a;
+  --secondary: #0d3b35;
+  --secondary-foreground: #dce1ff;
+  --muted: #1a4d45;
+  --muted-foreground: #9ab8b3;
+  --accent: #f9f5b2;
+  --accent-foreground: #0a152a;
+  --destructive: #ff6b6b;
+  --destructive-foreground: #dce1ff;
+  --border: #1a4d45;
+  --input: #0d3b35;
+  --ring: #5fae9e;
+  --chart-1: #5fae9e;
+  --chart-2: #f9f5b2;
+  --chart-3: #dce1ff;
+  --chart-4: #0d3b35;
+  --chart-5: #1a4d45;
+  --sidebar: #0d3b35;
+  --sidebar-foreground: #dce1ff;
+  --sidebar-primary: #5fae9e;
+  --sidebar-primary-foreground: #0a152a;
+  --sidebar-accent: #f9f5b2;
+  --sidebar-accent-foreground: #0a152a;
+  --sidebar-border: #1a4d45;
+  --sidebar-ring: #5fae9e;
+}
+
+@theme inline {
+  /* Updated font-sans to use Poppins for dreamy feel */
+  --font-sans: var(--font-sans);
+  --font-mono: "Courier New", monospace;
+  --font-playfair: var(--font-playfair);
+  --font-caveat: var(--font-caveat);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Added fantasy text effects and dreamy glow */
+/* Fantasy and Dreamy Text Effects */
+@keyframes dream-glow {
+  0% {
+    text-shadow: 0 0 10px rgba(95, 174, 158, 0.4), 0 0 20px rgba(249, 245, 178, 0.2);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(95, 174, 158, 0.8), 0 0 40px rgba(249, 245, 178, 0.5), 0 0 60px rgba(220, 225, 255, 0.3);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(95, 174, 158, 0.4), 0 0 20px rgba(249, 245, 178, 0.2);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.font-playfair {
+  font-family: var(--font-playfair);
+}
+
+.font-caveat {
+  font-family: var(--font-caveat);
+}
+
+.text-dream {
+  animation: dream-glow 3s ease-in-out infinite;
+}
+
+.text-shimmer {
+  background: linear-gradient(90deg, rgba(249, 245, 178, 0.5), rgba(220, 225, 255, 0.8), rgba(249, 245, 178, 0.5));
+  background-size: 1000px 100%;
+  animation: shimmer 4s infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-mystical {
+  color: #dce1ff;
+  text-shadow: 0 0 10px rgba(95, 174, 158, 0.6), 0 0 20px rgba(249, 245, 178, 0.4), 0 0 30px rgba(220, 225, 255, 0.2);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* LoFi Forest Custom Animations */
+@keyframes glow {
+  0%,
+  100% {
+    opacity: 0.6;
+    filter: drop-shadow(0 0 8px rgba(95, 174, 158, 0.6));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 16px rgba(95, 174, 158, 1));
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(-10px) translateX(5px);
+  }
+  50% {
+    transform: translateY(-20px) translateX(10px);
+  }
+  75% {
+    transform: translateY(-10px) translateX(5px);
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translateY(50px) translateX(-50px);
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px) translateX(50px);
+  }
+}
+
+@keyframes pulse-breath {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-drift {
+  animation: drift 8s ease-in-out infinite;
+}
+
+.animate-pulse-breath {
+  animation: pulse-breath 4s ease-in-out infinite;
+}
+
+@keyframes candle-flicker {
+  0%,
+  100% {
+    transform: translateX(-50%) scale(1) rotate(-3deg);
+    filter: drop-shadow(0 0 12px rgba(255, 207, 94, 0.85));
+  }
+  50% {
+    transform: translateX(-50%) scale(1.08) rotate(4deg);
+    filter: drop-shadow(0 0 18px rgba(255, 244, 174, 1));
+  }
+}
+
+@keyframes star-twinkle {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(0.92);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes lantern-sway {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) rotate(-1deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(2deg);
+  }
+}
+
+@keyframes beetle-crawl {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) translateX(-10px) translateY(1px);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateX(12px) translateY(-4px);
+  }
+}
+
+@keyframes mist-drift {
+  0%,
+  100% {
+    transform: translateX(-5%);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translateX(5%);
+    opacity: 0.78;
+  }
+}
+
+@keyframes planet-float {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-7px);
+  }
+}
+
+@keyframes moon-breathe {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 18px rgba(220, 225, 255, 0.38));
+  }
+  50% {
+    filter: drop-shadow(0 0 32px rgba(249, 245, 178, 0.42));
+  }
+}
+
+@keyframes forest-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-candle-flicker {
+  animation: candle-flicker 1.4s ease-in-out infinite;
+}
+
+.animate-star-twinkle {
+  animation: star-twinkle 3s ease-in-out infinite;
+}
+
+.animate-lantern-sway {
+  animation: lantern-sway 4.8s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+.animate-beetle-crawl {
+  animation: beetle-crawl 12s ease-in-out infinite;
+}
+
+.animate-mist-drift {
+  animation: mist-drift 14s ease-in-out infinite;
+}
+
+.animate-planet-float {
+  animation: planet-float 8s ease-in-out infinite;
+}
+
+.animate-moon-breathe {
+  animation: moon-breathe 6s ease-in-out infinite;
+}
+
+.animate-forest-fade-in {
+  animation: forest-fade-in 900ms ease-out both;
+}
